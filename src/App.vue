@@ -1,28 +1,58 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <router-view/>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
 export default {
   name: 'App',
-  components: {
-    HelloWorld
-  }
 }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed');
+
+:root {
+  --color-primary    : #526E2DFF;
+  --color-secondary  : #24325FFF;
+  --color-tertiary   : #B7E4F9FF;
+  --color-quaternary : #00b3cb;
+}
+
+@font-face {
+  font-family  : 'Get Schwifty';
+  src          : url('./fonts/GetSchwifty-Regular.woff2') format('woff2'),
+  url('./fonts/GetSchwifty-Regular.woff') format('woff');
+  font-weight  : normal;
+  font-style   : normal;
+  font-display : swap;
+}
+
+
+* {
+  box-sizing : border-box;
+  padding    : 0;
+  margin     : 0;
+}
+
+html, body {
+  font-family : 'Roboto', sans-serif;
+}
+
+.btn {
+  cursor          : pointer;
+  border          : 1px solid var(--color-secondary);
+  background      : var(--color-secondary);
+  color           : white;
+  padding         : .5em 1.25em;
+  text-decoration : none;
+  transition      : all .3s ease-in-out;
+  font-weight     : 700;
+}
+
+.btn:hover {
+  background : white;
+  color      : var(--color-secondary);
 }
 </style>
